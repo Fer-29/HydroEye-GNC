@@ -1,0 +1,43 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+LIST OF REQUIRED STABILITY DERIVATIVES & CONSTANTS FOR SIMULINK BY VSP
+Config : Flaps, Ailerons, Ruddervators - Pusher type
+Look at Reference Material folder for more info...
+Note: since this is for HITL we have to model each 
+	  ruddervator independently when collecting this data, this is 
+	  to make it easier when plugging in the PWM signals to not have to 
+	  do a mixer (i know lazy, but also experimenatal!).
+	  The procedure is as follows: map both up + down + right + left,
+	  but index them independently in the lookup.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-----------------------------------------------------------------------|
+Coeff																   |
+-----------------------------------------------------------------------|
+
+Longitudinal:
+CL = CL_alpha + CL_flaps * flap_ang + CL_elev * elev_ang
+CD = CD_alpha + CD_flaps * flap_ang + CD_elev * elev_ang
+Cm = Cm_alpha + Cm_flaps * flap_ang + Cm_elev * elev_ang (Cm_(r1+r2)) * (ang of both r1&r2 which should be the same) + (Cm_aileron * aileron_ang <-- this isn't THAT significant, but keep in mind that we lose some pitch when we roll :))
+
+Lateral:
+Cy = Cy_beta + Cy_aileron * aileron_ang + Cy_rudder * rudder_ang
+Cl = Cl_beta * beta + Cl_aileron * aileron_ang + Cl_rudder * rudder_ang
+Cn = Cn_beta + Cn_aileron * aileron_ang + Cn_rudder * rudder_ang
+
+--------------------------------------------------------------------------|
+Damping   (Take them as constants, since they're almost always linear)    |
+--------------------------------------------------------------------------|
+p:
+Clp
+Cnp
+
+q:
+Cmq
+
+r:
+Clr
+Cnr
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
