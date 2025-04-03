@@ -1,5 +1,5 @@
 # Reference Material
-This is what I mainly used as a reference for this project  :)
+This is what I mainly used as a reference for this project, In addition to some pictures which help me keep track of important concepts, code, etc.  :)
 ## Books
 - INTRODUCTION TO AIRCRAFT FLIGHT MECHANICS 1st Edition, By Thomas R. Yechout
 ## Links
