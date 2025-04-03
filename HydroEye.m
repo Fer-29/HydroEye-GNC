@@ -1,3 +1,7 @@
+%% HITL
+SampleTime = 0.01;
+MAVLink_Input_Read_Size = 1024;
+
 %% 6 dof
 mass = 7;
 I = [0.32 -0.01 0.13;
