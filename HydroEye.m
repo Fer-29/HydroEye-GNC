@@ -1,8 +1,9 @@
-%% HITL
+%% HITL Params
 SampleTime = 0.01;
 MAVLink_Input_Read_Size = 1024;
 
-%% 6 dof
+%% Simulink Params
+% Physical Properties
 mass = 7;
 I = [0.32 -0.01 0.13;
     -0.01  2.65   0;
@@ -15,16 +16,18 @@ Sref = 0.57; %m2
 b = 2; %m
 c = 0.35; %m
 
-init.V = [19 0 0];
-init.theta = 3; %deg
-init.q = 0;
-init.alpha = 12;
+% 6 DOF Block Initial conditions
+init.v = [19 0 0];
+init.angles = [0 0 0];
+init.angRates = [0 0 0];
 init.pos = [0 0 -120]; % meters
 
 
 thrust  = [1798 2069 2380 2771 3241 3738 4145 4635]/1000;
 power = [253.85 307.76 371.33 446.90 568.11 693.11 810.01 955.01];
 current = [11.43 13.89 16.79 20.26 	25.87 31.71 37.21 44.10	];
+
+% Coefficients from a .csv method
 % longitudinal
 elevator = unique(AeroLong.elevator);
 alpha = unique(AeroLong.alpha);
