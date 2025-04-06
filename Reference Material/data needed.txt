@@ -9,6 +9,26 @@ Note: since this is for HITL we have to model each
 	  The procedure is as follows: map both up + down + right + left,
 	  but index them independently in the lookup.
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VSPAERO uses the following convention...
+
+Body axis forces:
+CFx          CFy          CFz
+Body axis moments:
+CMx          CMy          CMz
+
+Wind axis forces:
+CL           CD           CS
+Wind axis moments:
+CMl          CMm          CMn
+
+In the context of sideslip and rudder sizing, 
+CnBeta most likely means the derivative of the yawing moment due to sideslip.  So, in VSPAERO speak that is
+
+CMn wrt Beta
+
+CyBeta most likely means the derivative of the side force due to sideslip.  So, in VSPAERO speak that is
+
+CS wrt Beta
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
