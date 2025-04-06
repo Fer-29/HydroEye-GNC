@@ -4,6 +4,7 @@ This is what I mainly used as a reference for this project, In addition to some 
 - INTRODUCTION TO AIRCRAFT FLIGHT MECHANICS 1st Edition, By Thomas R. Yechout
 ![alt-text](https://github.com/Fer-29/HydroEye-GNC/blob/main/Reference%20Material/book.PNG)
 ## Links
+- https://groups.google.com/g/openvsp/c/pIlYESRGBsM OpenVSP naming conventions and lateral derivatives, this is mainly to translate our known conventions (Cn_beta for example) to OpenVSP's
 - https://www.mathworks.com/help/aeroblks/hl-20-with-flight-instrumentation-blocks.html 
 - https://www.mathworks.com/help/uav/px4/ref/px4-stock-hitl-simulink-example.html#responsive_offcanvas HITL model reference
 - https://www.mathworks.com/help/uav/px4/ref/pil-example-px4.html PITL showcase
