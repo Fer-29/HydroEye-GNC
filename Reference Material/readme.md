@@ -5,13 +5,13 @@ This is what I mainly used as a reference for this project, In addition to some 
 INTRODUCTION TO AIRCRAFT FLIGHT MECHANICS 1st Edition, By Thomas R. Yechout
 </div>
 <p align="center">
-  <img src="https://github.com/Fer-29/HydroEye-GNC/blob/main/Reference%20Material/book.PNG" width="240">
+  <img src="https://github.com/Fer-29/HydroEye-GNC/blob/main/Reference%20Material/book.PNG" width="360">
 </p>
 <div align="center">
 Designing Unmanned Aircraft Systems: A Comprehensive Approach, By Jay Gundlach
 </div>
 <p align="center">
-<img src="https://github.com/Fer-29/HydroEye-GNC/blob/main/Reference%20Material/61rp3K6hfVL.jpg" width="240">
+<img src="https://github.com/Fer-29/HydroEye-GNC/blob/main/Reference%20Material/61rp3K6hfVL.jpg" width="360">
 </p>
 
   ## Links
