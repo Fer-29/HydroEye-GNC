@@ -1,4 +1,4 @@
-![alt text](https://github.com/Fer-29/HydroEye-GNC/blob/main/HITL%20Model/s.PNG)
+![alt text](https://github.com/Fer-29/HydroEye-GNC/blob/main/Other/iso_white2.png)
 # HydroEye's Repository
 ## What is HydroEye
 HydroEye is an agriculture based surveillance UAV, which features a hybrid power system of a PEM fuel cell and LiPo batteries to extend its endurance.
