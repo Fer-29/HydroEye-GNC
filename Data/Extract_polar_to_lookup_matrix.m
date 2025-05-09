@@ -1,5 +1,6 @@
 %% control angles
-elevator = [10 0 -10];
+ailerons = [5 10];
+elevator = [-10 0 10];
 rudder = [10 0 -10];
 flaps = [0 10];
 %% Extracting .polar files to matricies for Simulink Model Lookup tables
@@ -83,34 +84,13 @@ xlabel('Angle of Attack (degrees)');
 ylabel('Lift Coefficient (CL)');
 title('CL vs Alpha');
 grid on;
-
 %% Grouping Data ( This is done one time, then this data is saved ) 
-% Longitudinal
-
-% CL
+%Longitudinal
 CLo = CL;
-CL_flaps = CL - CLo;
-CL_elev_neg10 = CL;
-CL_elev_pos10 = CL;
-
-% CD
 CDo = CDtot;
-CD_flaps = CDtot - CDo;
-CD_elev_neg10 = CDtot;
-CD_elev_pos10 = CDtot;
-
-% CMm
 Cmo = CMm;
-Cm_flaps = CMm - Cmo;
-Cm_elev_neg10 = CMm;
-Cm_elev_pos10 = CMm;
-
-CLo_CL_elev = [CL_elev_neg10 CLo CL_elev_pos10];
-CDo_CD_elev = [CD_elev_neg10 CDo  CD_elev_pos10];
-Cmo_Cm_elev = [Cm_elev_neg10 Cmo Cm_elev_pos10];
 
 % Lateral 
-
 Cyo = CS;
 Clo = CMl;
 Cno = CMn;
@@ -122,6 +102,46 @@ Cn_left_yaw = CMn;
 Cy_right_yaw = CS;
 Cl_right_yaw = CMl;
 Cn_right_yaw = CMn;
+
+
+
+% Control Surfaces
+CL_flaps = CL - CLo;
+CL_elev_neg10 = CL;
+CL_elev_pos10 = CL;
+CL_ailerons_5deg = CL - CLo;
+CL_ailerons_10deg = CL - CLo;
+CL_ailerons = [CL_ailerons_5deg CL_ailerons_10deg];
+
+CD_flaps = CDtot - CDo;
+CD_elev_neg10 = CDtot;
+CD_elev_pos10 = CDtot;
+CD_ailerons_5deg = CDtot - CDo;
+CD_ailerons_10deg = CDtot - CDo;
+CD_ailerons = [CD_ailerons_5deg CD_ailerons_10deg];
+
+Cm_flaps = CMm - Cmo;
+Cm_elev_neg10 = CMm;
+Cm_elev_pos10 = CMm;
+Cm_ailerons_5deg = CMm - Cmo;
+Cm_ailerons_10deg = CMm - Cmo;
+Cm_ailerons = [Cm_ailerons_5deg Cm_ailerons_10deg];
+
+Cy_ailerons_5deg = CS - Cyo;
+Cy_ailerons_10deg = CS - Cyo;
+Cy_ailerons = [Cy_ailerons_5deg Cy_ailerons_10deg];
+
+Cl_ailerons_5deg = CMl - Clo;
+Cl_ailerons_10deg = CMl - Clo;
+Cl_ailerons = [Cl_ailerons_5deg Cl_ailerons_10deg];
+
+Cn_ailerons_5deg = CMn - Cno;
+Cn_ailerons_10deg = CMn - Cno;
+Cn_ailerons = [Cn_ailerons_5deg Cn_ailerons_10deg];
+
+CLo_CL_elev = [CL_elev_neg10 CLo CL_elev_pos10];
+CDo_CD_elev = [CD_elev_neg10 CDo  CD_elev_pos10];
+Cmo_Cm_elev = [Cm_elev_neg10 Cmo Cm_elev_pos10];
 
 Cyo_Cy_rudder = [Cy_left_yaw Cyo Cy_right_yaw];
 Clo_Cl_rudder = [Cl_left_yaw Clo Cl_right_yaw];
